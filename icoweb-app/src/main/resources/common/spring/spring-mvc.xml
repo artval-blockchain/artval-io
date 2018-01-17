@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Bean头部 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+            http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+			http://code.alibabatech.com/schema/dubbo
+        	http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!--配置文件占位符 -->
+	<bean id="propertyConfigurer"
+		  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath*:env/*.properties</value>
+			</list>
+		</property>
+		<property name="fileEncoding" value="utf-8" />
+	</bean>
+
+
+	<context:component-scan base-package="com.moochain"/>
+	<mvc:resources mapping="/*.txt"  location="/static/"/>
+	<mvc:resources mapping="/css/**"  location="/static/css/"/>
+	<mvc:resources mapping="/images/**"  location="/static/images/"/>
+	<mvc:resources mapping="/js/**"  location="/static/js/"/>
+	<mvc:resources mapping="/lib/**"  location="/static/lib/"/>
+
+	<!-- 默认的注解映射的支持 -->
+	<mvc:annotation-driven  validator="validator" conversion-service="conversion-service" >
+		<mvc:message-converters register-defaults="true">
+			<ref bean="stringHttpMessageConverter" />
+			<ref bean="fastJsonHttpMessageConverter" />
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<bean id="stringHttpMessageConverter"
+		  class="org.springframework.http.converter.StringHttpMessageConverter">
+		<constructor-arg value="UTF-8" index="0"></constructor-arg>
+		<property name="supportedMediaTypes">
+			<list>
+				<value>text/plain;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="fastJsonHttpMessageConverter" class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter4">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>application/json;charset=UTF-8</value>
+			</list>
+		</property>
+		<property name="fastJsonConfig">
+			<bean class="com.alibaba.fastjson.support.config.FastJsonConfig">
+				<property name="features">
+					<list>
+						<value>AllowArbitraryCommas</value>
+						<value>AllowUnQuotedFieldNames</value>
+						<value>DisableCircularReferenceDetect</value>
+						<value>IgnoreNotMatch</value>
+					</list>
+				</property>
+				<property name="dateFormat" value="yyyy-MM-dd HH:mm:ss"></property>
+			</bean>
+		</property>
+	</bean>
+
+	<!-- 配置国际化资源文件路径 -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename">
+			<!-- 定义消息资源文件的相对路径 -->
+			<value>i8n.message</value>
+		</property>
+	</bean>
+
+	<!-- 基于Cookie的本地化解析器 -->
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="cookieMaxAge" value="604800"/>
+		<property name="defaultLocale" value="zh_CN"/>
+		<property name="cookieName" value="Language"></property>
+	</bean>
+
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="providerClass"  value="org.hibernate.validator.HibernateValidator"/>
+		<!--不设置则默认为classpath下的 ValidationMessages.properties -->
+		<property name="validationMessageSource" ref="validatemessageSource"/>
+	</bean>
+	<bean id="conversion-service" class="org.springframework.format.support.FormattingConversionServiceFactoryBean" />
+	<bean id="validatemessageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:messages"/>
+		<property name="fileEncodings" value="utf-8"/>
+		<property name="cacheSeconds" value="120"/>
+	</bean>
+
+	<!-- freemarker -->
+	<bean id="freemarkerConfig"
+		  class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="templateLoaderPath" value="/WEB-INF/tpl/" />
+		<property name="freemarkerSettings">
+			<props>
+				<prop key="template_update_delay">0</prop>
+				<prop key="default_encoding">UTF-8</prop>
+				<prop key="number_format">0.##########</prop>
+				<prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
+				<prop key="classic_compatible">true</prop>
+				<prop key="template_exception_handler">ignore</prop>
+				<prop key="auto_import">spring.ftl as spring</prop>
+
+			</props>
+		</property>
+	</bean>
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<property name="cache" value="true" />
+		<property name="prefix" value="" />
+		<property name="suffix" value=".ftl" />
+		<property name="contentType" value="text/html;charset=UTF-8"></property>
+		<property name="requestContextAttribute" value="request" />
+		<property name="exposeSpringMacroHelpers" value="true" />
+		<property name="exposeRequestAttributes" value="true" />
+		<property name="exposeSessionAttributes" value="true" />
+	</bean>
+
+
+	<import resource="spring-redis.xml"/>
+
+</beans>

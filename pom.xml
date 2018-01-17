@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.moochain</groupId>
+    <artifactId>icoweb</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>MAIcoAPP</name>
+    <description>MAIcoAPP</description>
+    
+    <properties>
+        <spring.version>4.3.7.RELEASE</spring.version>
+        <spring.mongodb.version>1.9.2.RELEASE</spring.mongodb.version>
+        <google.guava.version>20.0</google.guava.version>
+        <commons.lang3.version>3.5</commons.lang3.version>
+        <spring.mybatis.version>1.0.0</spring.mybatis.version>
+        <spring.mybatis.pagehelper.version>4.1.1</spring.mybatis.pagehelper.version>
+        <jodd.version>3.8.0</jodd.version>
+        <fastjson.version>1.2.21</fastjson.version>
+        <dubbo.version>2.5.3</dubbo.version>
+        <servlet.version>2.5</servlet.version>
+        <dom4j.version>1.6.1</dom4j.version>
+        <mail.version>1.4.7</mail.version>
+        <oss.version>2.0.7</oss.version>
+        <zixing.version>3.0.0</zixing.version>
+    </properties>
+
+    <modules>
+        <module>icoweb-service</module>
+        <module>icoweb-app</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>utf-8</encoding>
+                </configuration>
+                <version>3.6.1</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <!-- 本地环境 -->
+            <id>localhost</id>
+            <properties>
+                <profile.env>localhost</profile.env>
+            </properties>
+
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <!-- 测试环境 -->
+            <id>develop</id>
+            <properties>
+                <profile.env>develop</profile.env>
+            </properties>
+        </profile>
+
+        <profile>
+            <!-- 生产环境 -->
+            <id>production</id>
+            <properties>
+                <profile.env>production</profile.env>
+            </properties>
+        </profile>
+    </profiles>
+
+</project>

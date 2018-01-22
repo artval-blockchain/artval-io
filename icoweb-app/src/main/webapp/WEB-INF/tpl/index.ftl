@@ -18,14 +18,11 @@
         </div>
         <div class="nav-contain arv-floatR">
             <ul class="layui-nav arv-bg-white arv-floatR">
-                <li class="layui-nav-item" id="language">
-                    <img src="/images/zh_CN.png" alt="简体中文"><a href="" class="arv-font-size16">中文简体</a>
+                <li class="layui-nav-item">
+                    <a href="" class="arv-font-size16">中文简体</a>
                     <dl class="layui-nav-child">
-                        <dd><img src="/images/en.png" alt="English"><span class="arv-font-size16">English</span></dd>
-                        <dd><img src="/images/ko.png" alt="한글"><span href="javascript:;" class="arv-font-size16">한글</span></dd>
-                        <dd><img src="/images/ja.png" alt="ほうぶん"><span href="javascript:;" class="arv-font-size16">ほうぶん</span></dd>
-                        <dd><img src="/images/zh_CN.png" alt="简体中文"><span href="javascript:;" class="arv-font-size16">简体中文</span></dd>
-                        <dd><img src="/images/zh_TW.png" alt="繁體中文"><span href="javascript:;" class="arv-font-size16">繁體中文</span></dd>
+                        <dd><a href="javascript:;" class="arv-font-size16">中文</a></dd>
+                        <dd><a href="javascript:;" class="arv-font-size16">英文</a></dd>
                     </dl>
                 </li>
             </ul>
@@ -40,7 +37,7 @@
         </div>
     </div>
     <div id="banner">
-        <img src="/images/banner.jpg">
+        <img src="/images/banner.png">
     </div>
     <div id="project"  aos="fade-up" aos-anchor-placement="top-bottom" class="arv-containter">
         <div class="arv-title">
@@ -48,14 +45,14 @@
         </div>
         <div class="contain">
             <div class="arv-floatL show">
-                <iframe src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=b8ef3465dc34b35b9dbc16f6ed2c1a99&tvId=8924346809&accessToken=2.f22860a2479ad60d8da7697274de9346&appKey=3955c3425820435e86d0f4cdfe56f5e7&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="100%"></iframe>
+                 <iframe frameborder="0" width="640" height="498" src="https://v.qq.com/iframe/player.html?vid=z0527cfx2gy&tiny=0&auto=0" allowfullscreen></iframe>
             </div>
             <ul>
                 <li>
-                    <iframe src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=b8ef3465dc34b35b9dbc16f6ed2c1a99&tvId=8924346809&accessToken=2.f22860a2479ad60d8da7697274de9346&appKey=3955c3425820435e86d0f4cdfe56f5e7&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="100%"></iframe>
+                    <iframe frameborder="0" width="640" height="498" src="https://v.qq.com/iframe/player.html?vid=z0527cfx2gy&tiny=0&auto=0" allowfullscreen></iframe>
                 </li>
                 <li>
-                    <iframe src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=b8ef3465dc34b35b9dbc16f6ed2c1a99&tvId=8924346809&accessToken=2.f22860a2479ad60d8da7697274de9346&appKey=3955c3425820435e86d0f4cdfe56f5e7&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="100%"></iframe>
+                    <iframe frameborder="0" width="640" height="498" src="https://v.qq.com/iframe/player.html?vid=z0527cfx2gy&tiny=0&auto=0" allowfullscreen></iframe>
                 </li>
                 <li>
                     <iframe frameborder="0" width="640" height="498" src="https://v.qq.com/iframe/player.html?vid=z0527cfx2gy&tiny=0&auto=0" allowfullscreen></iframe>
@@ -71,18 +68,60 @@
             <span><@spring.message code="message.reg.art"/></span>
         </div>
         <div class="arv-containter contain">
-            <div class="big_img">
-                <a href="http://reg.artval.io/art/info/T151080215103147211036"><img aos="flip-left" aos-easing="ease-out-cubic" aos-duration="1500" src="/images/artshow/show1.png"></a>
-                <a href="http://reg.artval.io/art/info/T151080201502828636447"><img  aos="flip-left" aos-easing="ease-out-cubic" aos-duration="1500" src="/images/artshow/show2.png" alt=""></a>
-            </div>
-            <div class="small_img">
-                <a href="http://reg.artval.io/art/info/T151212119771506186028"><img  aos="flip-left" aos-easing="ease-out-cubic" aos-duration="1500" src="/images/artshow/show3.png" alt=""></a>
-                <a href="http://reg.artval.io/art/info/T151269737881759863522"><img  aos="flip-left" aos-easing="ease-out-cubic" aos-duration="1500" src="/images/artshow/show4.png" alt=""></a>
-                <a href="http://reg.artval.io/art/info/T151269823246676416187"><img  aos="flip-left" aos-easing="ease-out-cubic" aos-duration="1500" src="/images/artshow/show5.png" alt=""></a>
-                <a href="http://reg.artval.io/art/info/T151261183272427008609"><img  aos="flip-left" aos-easing="ease-out-cubic" aos-duration="1500" src="/images/artshow/show6.png" alt=""></a>
-                <a href="http://reg.artval.io/art/info/T151140431976702803768"><img  aos="flip-left" aos-easing="ease-out-cubic" aos-duration="1500" src="/images/artshow/show7.png" alt=""></a>
-                <a href="http://reg.artval.io/art/info/T151269951260433005707"><img  aos="flip-left" aos-easing="ease-out-cubic" aos-duration="1500" src="/images/artshow/show8.png" alt=""></a>
-            </div>
+            <ul>
+                <li class="arv-floatL">
+                    <div class="img">
+                        <img src="http://moochain-art.oss-cn-beijing.aliyuncs.com/production/U1510488050471847793/HCJAdQFTN3/cover.jpg?x-oss-process=image/resize,m_mfit,w_240" alt="作品">
+                    </div>
+                   <div class="inf arv-floatL">
+                        <p>李兴辉</p>
+                        <span>3 <@spring.message code="message.reg.works"/></span>
+                        <em>1981</em>
+                   </div>
+                    <div class="head">
+                        <img class="layui-circle" src="http://moochain-art.oss-cn-beijing.aliyuncs.com/production/U1510488050471847793/a6j3PXY5Fy/照片.jpg" alt="头像">
+                    </div>
+                </li>
+                <li class="arv-floatL">
+                    <div class="img">
+                        <img src="http://moochain-art.oss-cn-beijing.aliyuncs.com/production/U1510644962768383794/XZ6snAyTam/cover.jpg?x-oss-process=image/resize,m_mfit,w_240" alt="作品">
+                    </div>
+                    <div class="inf arv-floatL">
+                        <p>喻京川</p>
+                        <span>4 <@spring.message code="message.reg.works"/></span>
+                        <em>1968</em>
+                    </div>
+                    <div class="head">
+                        <img class="layui-circle" src="http://moochain-art.oss-cn-beijing.aliyuncs.com/production/U1510644962768383794/zTsfmP7S6t/NO169-1.jpg" alt="头像">
+                    </div>
+                </li>
+                <li class="arv-floatL">
+                    <div class="img">
+                        <img src="http://moochain-art.oss-cn-beijing.aliyuncs.com/production/U1514515703785331585/ttG8x4P7BD/cover.jpg?x-oss-process=image/resize,m_mfit,w_240" alt="作品">
+                    </div>
+                    <div class="inf arv-floatL">
+                        <p>周扬波</p>
+                        <span>4 <@spring.message code="message.reg.works"/></span>
+                        <em>1981</em>
+                    </div>
+                    <div class="head">
+                        <img class="layui-circle" src="http://moochain-art.oss-cn-beijing.aliyuncs.com/production/U1514515703785331585/head.jpg" alt="头像">
+                    </div>
+                </li>
+                <li class="arv-floatL">
+                    <div class="img">
+                        <img src="http://moochain-art.oss-cn-beijing.aliyuncs.com/production/U1510817029128850061/zZdGWNXpTS/壮志凌云_看图王.jpg?x-oss-process=image/resize,m_mfit,w_240" alt="作品">
+                    </div>
+                    <div class="inf arv-floatL">
+                        <p>闫则名</p>
+                        <span>8 <@spring.message code="message.reg.works"/></span>
+                        <em>1968</em>
+                    </div>
+                    <div class="head">
+                        <img class="layui-circle" src="http://moochain-art.oss-cn-beijing.aliyuncs.com/production/U1510817029128850061/Wzbs6iTfJf/3.jpg" alt="头像">
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
     <div id="route"  aos="fade-up" aos-anchor-placement="top-bottom">
@@ -90,31 +129,11 @@
             <span><@spring.message code="message.index.route"/></span>
         </div>
         <div class="contain">
-           <div aos="fade-left" class="time time1">
-                <span>2017/09</span>
-                <p>鉴证登记平台上线运营</p>
-           </div>
-           <div aos="fade-right" class="time time2">
-               <span>2018/06</span>
-               <p>去中心化定价市场全流程开发完成</p>
-           </div>
-            <div aos="fade-left" class="time time3">
-                <span>2018/12</span>
-                <p>持续升级迭代，算法优化，扩大运营</p>
-            </div>
-            <div aos="fade-right" class="time time4">
-                <span>2019/12</span>
-                <p>专有艺术品区块链开发</p>
-            </div>
+            <div style="width:100%;height:300px;background-color: red;"></div>
         </div>
     </div>
     <div id="book"  aos="fade-up" aos-anchor-placement="top-bottom" name="#book">
         <div class="book">
-            <div class="book-title">
-                <p>ARTVAL</p>
-                <span>项目白皮书</span>
-                <div>2017/12</div>
-            </div>
         </div>
         <div class="contain arv-containter">
             <div class="contain-left">
@@ -395,19 +414,7 @@
         </ul>
     </div>
     <div id="bottom"  aos="fade-up" aos-anchor-placement="top-bottom">
-        <div class="com">
-            <a href="https://www.facebook.com/art.val.79219?fref=nf" target="_bank"><img src="/images/c1.png" ></a>
-            <a href="" target="_bank"><img src="/images/c2.png"></a>
-            <a href="https://github.com/artval-blockchain" target="_bank"><img src="/images/c3.png"></a>
-            <a href="https://twitter.com/artval_io" target="_bank"><img src="/images/c4.png"></a>
-        </div>
-        <div class="menu">
-            <a href="#book">白皮书</a>
-            <a href="#team">团队介绍</a>
-            <a href="#news">新闻报道</a>
-            <a href="">常见问题</a>
-        </div>
-        <p>All rights reserved. 版权所有</p>
+
     </div>
     <script src="/lib/layui/layui.all.js"></script>
     <script src="/lib/aos/aos.js"></script>
@@ -418,7 +425,7 @@
         });
         AOS.init({
             easing: 'ease-out-back',
-            duration: 1500,
+            duration: 1000,
             once:true
         });
     </script>

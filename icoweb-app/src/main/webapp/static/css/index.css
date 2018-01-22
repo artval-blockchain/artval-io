@@ -105,12 +105,43 @@ span{
 }
 .layui-nav .layui-nav-more{
     border-top-color:#333;
-    top: 24px;
+    top: 22px;
 }
 .layui-nav .layui-nav-mored{
     border-style:dashed dashed solid;
-    top: 18px;
+    top: 16px;
     border-color:transparent transparent #333;
+}
+.layui-nav-child{
+    top:49px;
+}
+#language dl span{
+    color: #333;
+    padding-left: 12px;
+    font-size: 16px;
+}
+#language dl{
+    width: 164px;
+    padding: 4px 0 24px;
+    box-shadow: 0 2px 3px 0 rgba(60,60,60,0.07);
+    -webkit-box-shadow: 0 2px 3px 0 rgba(60,60,60,0.07);
+    border: none;
+}
+#language dd{
+    margin-top: 10px;
+    cursor: pointer;
+    padding-left: 25px;
+}
+#language a{
+    display: inline-block;
+    padding-left: 12px;
+}
+#language>img{
+    position: relative;
+    top:-1px;
+}
+#language dd:hover span{
+    color: #33A695;
 }
 /*banner*/
 #banner img{
@@ -164,67 +195,67 @@ span{
 /*已登记艺术品展示*/
 #art-show .contain{
     padding-top: 70px;
+    height: 270px;
 }
-#art-show ul{
-    height: 296px;
+#art-show .big_img{
+    float: left;
 }
-#art-show li{
-    width: 219px;
-    height: 296px;
-    padding: 8px;
-    box-shadow: 0 2px 14px 0 rgba(208,208,208,0.35);
-    -webkit-box-shadow: 0 2px 14px 0 rgba(208,208,208,0.35);
+#art-show img,#art-show a{
+    float: left;
+}
+#art-show .big_img img:first-child{
     margin-right: 20px;
 }
-#art-show li:last-child{
+#art-show .small_img{
+    padding-left: 580px;
+    width: 420px;
+}
+#art-show .small_img img{
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+#art-show .small_img a:nth-child(3n) img{
     margin-right: 0;
 }
-#art-show .img{
-    width: 219px;
-    height: 171px;
-    position: relative;
-    margin-bottom: 30px;
-}
-#art-show .img img{
-    max-width: 219px;
-    max-height: 171px;
-    position: absolute;
-    left: 50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    -webkit-transform:translate(-50%,-50%);
-}
-#art-show .inf{
-    padding-left: 12px;
-}
-#art-show .inf p{
-    font-size: 20px;
-    color: #333333;
-    line-height: 28px;
-    margin-bottom: 8px;
-}
-#art-show .inf span{
-    display: block;
-    font-size: 16px;
-    color: #666666;
-    margin-bottom: 8px;
-}
-#art-show .inf em{
-    font-style: normal;
-    font-size: 15px;
-    color: #999999;
-}
-#art-show  .head{
-    padding-left: 160px;
-    padding-top: 25px;
-}
-#art-show  .head img{
-    width: 60px;
-    height: 60px;
-}
-/*路线图*/
+    /*路线图*/
 #route .contain{
-    margin-top: 70px;
+    width: 16px;
+    margin: 70px auto 102px;
+    height:404px;
+    background: url("/images/axis.png") 0 0 no-repeat;
+    position: relative;
+}
+#route .time{
+    position: relative;
+    width: 400px;
+}
+#route .time span{
+    font-size: 20px;
+    color: #33A695;
+    line-height: 28px;
+}
+#route .time p{
+    font-size: 16px;
+    color: #333333;
+    line-height: 22px;
+}
+#route .time1{
+    left: 60px;
+    top:20px;
+}
+#route .time2{
+    left: -448px;
+    text-align: right;
+    top:44px;
+}
+#route .time3{
+    left: 60px;
+    top:68px;
+}
+#route .time4{
+    left: -448px;
+    text-align: right;
+    top:93px;
 }
 /*白皮书*/
 #book{
@@ -246,6 +277,23 @@ span{
     left:50%;
     transform:translate(-50%,0%);
     -webkit-transform:translate(-50%,0);
+}
+#book .book-title{
+    position: absolute;
+    right: 22px;
+    top:18px;
+    text-align:right;
+}
+#book .book-title>p,#book .book-title>span{
+    font-size: 16px;
+    color: #333333;
+    line-height: 26px;
+}
+#book .book-title>div{
+    margin-top: 2px;
+    font-size: 12px;
+    color: #666666;
+    line-height: 16px;
 }
 #book .contain{
     height:150px;
@@ -403,4 +451,27 @@ span{
     height: 160px;
     background-color: #333;
     margin-top: 100px;
+}
+#bottom .com{
+    text-align:center;
+    padding-top: 40px;
+    padding-bottom: 27px;
+}
+#bottom .com img{
+    margin: 0 15px;
+}
+#bottom .menu{
+    text-align: center;
+    margin-bottom: 8px;
+}
+#bottom .menu a{
+    margin: 0 15px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+#bottom p{
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
 }

@@ -62,7 +62,7 @@ span{
     text-align: center;
     position: relative;
     padding-bottom: 15px;
-    padding-top: 100px;
+    padding-top:80px;
 }
 .arv-title:after{
     width:26px;
@@ -105,127 +105,164 @@ span{
 }
 .layui-nav .layui-nav-more{
     border-top-color:#333;
-    top: 24px;
+    top: 22px;
 }
 .layui-nav .layui-nav-mored{
     border-style:dashed dashed solid;
-    top: 18px;
+    top: 16px;
     border-color:transparent transparent #333;
+}
+.layui-nav-child{
+    top:49px;
+    left: -22px;
+}
+#language dl span{
+    color: #333;
+    padding-left: 12px;
+    font-size: 16px;
+}
+#language dl{
+    width: 170px;
+    padding: 4px 0 24px;
+    box-shadow: 0 2px 3px 0 rgba(60,60,60,0.07);
+    -webkit-box-shadow: 0 2px 3px 0 rgba(60,60,60,0.07);
+    border: none;
+}
+#language dd{
+    margin-top: 10px;
+    cursor: pointer;
+    padding-left: 25px;
+}
+#language a{
+    display: inline-block;
+    padding-left: 12px;
+}
+#language>img{
+    position: relative;
+    top:-1px;
+}
+#language dd:hover span{
+    color: #33A695;
 }
 /*banner*/
 #banner img{
     width: 100%;
-    height: 500px;
 }
 /*項目介紹*/
 #project .contain{
-    height: 460px;
-    margin-top: 60px;
-    margin-bottom: 100px;
+    margin-top: 20px;
 }
-#project .show iframe{
-    height: 460px;
-    width: 720px;
+#project .contain>p{
+    font-size: 14px;
+    color: #666666;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 #project .contain ul{
-    padding-left: 740px;
-}
-#project .contain ul li{
-    margin-bottom: 20px;
-    width: 260px;
-    height: 140px;
-}
-#project .contain ul li:after{
-    margin-bottom: 0;
-}
-#project .contain ul iframe{
-    width: 260px;
-    height: 140px;
-}
-/*介绍内容*/
-#project-con{
-    background:url('/images/project_bg.png') 0 0 no-repeat;
-    background-size: 100% 100%;
-    height: 140px;
-    width: 100%;
-    position: relative;
-}
-#project-con span{
-    font-size: 16px;
-    line-height: 24px;
-    color: #fff;
-    width: 1000px;
     text-align: center;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform:translate(-50%,-50%);
-    -webkit-transform:translate(-50%,-50%);
+}
+#project .contain li{
+    display: inline-block;
+    width: 226px;
+    vertical-align: top;
+    margin: 0 30px;
+}
+#project .contain li p{
+    font-size: 18px;
+    color: #333333;
+    margin: 18px 0;
+    line-height: 25px;
+}
+#project .contain li span{
+    text-align: left;
+    font-size: 14px;
+    color: #666666;
+    line-height: 20px;
 }
 /*已登记艺术品展示*/
 #art-show .contain{
-    padding-top: 70px;
+    padding-top: 62px;
+    height: 298px;
 }
-#art-show ul{
-    height: 296px;
+#art-show .contain p{
+    font-size: 14px;
+    color: #333333;
+    line-height: 20px;
+    height: 20px;
+    margin-bottom: 6px;
 }
-#art-show li{
-    width: 219px;
-    height: 296px;
-    padding: 8px;
-    box-shadow: 0 2px 14px 0 rgba(208,208,208,0.35);
-    -webkit-box-shadow: 0 2px 14px 0 rgba(208,208,208,0.35);
+#art-show .contain p a{
+    float: right;
+    padding-right: 10px;
+    background:url("/images/right_arrow.png") right center no-repeat;
+    margin-right: 6px;
+    color: #333333;
+}
+#art-show .contain p a:hover{
+    color: #333333;
+}
+#art-show .big_img{
+    float: left;
+}
+#art-show img,#art-show a{
+    float: left;
+}
+#art-show .big_img img:first-child{
     margin-right: 20px;
 }
-#art-show li:last-child{
+#art-show .small_img{
+    padding-left: 580px;
+    width: 420px;
+}
+#art-show .small_img img{
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+#art-show .small_img a:nth-child(3n) img{
     margin-right: 0;
 }
-#art-show .img{
-    width: 219px;
-    height: 171px;
-    position: relative;
-    margin-bottom: 30px;
-}
-#art-show .img img{
-    max-width: 219px;
-    max-height: 171px;
-    position: absolute;
-    left: 50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    -webkit-transform:translate(-50%,-50%);
-}
-#art-show .inf{
-    padding-left: 12px;
-}
-#art-show .inf p{
-    font-size: 20px;
-    color: #333333;
-    line-height: 28px;
-    margin-bottom: 8px;
-}
-#art-show .inf span{
-    display: block;
-    font-size: 16px;
-    color: #666666;
-    margin-bottom: 8px;
-}
-#art-show .inf em{
-    font-style: normal;
-    font-size: 15px;
-    color: #999999;
-}
-#art-show  .head{
-    padding-left: 160px;
-    padding-top: 25px;
-}
-#art-show  .head img{
-    width: 60px;
-    height: 60px;
-}
-/*路线图*/
+    /*路线图*/
 #route .contain{
-    margin-top: 70px;
+    width: 16px;
+    margin: 70px auto 102px;
+    height:404px;
+    background: url("/images/axis.png") 0 0 no-repeat;
+    position: relative;
+}
+#route .time{
+    position: relative;
+    width: 400px;
+}
+#route .time span{
+    font-size: 20px;
+    color: #33A695;
+    line-height: 28px;
+}
+#route .time p{
+    font-size: 16px;
+    color: #333333;
+    line-height: 22px;
+}
+#route .time1{
+    left: 60px;
+    top:20px;
+}
+#route .time2{
+    left: -510px;
+    text-align: right;
+    top:44px;
+    width: 465px;
+}
+#route .time3{
+    left: 60px;
+    top:70px;
+    width: 525px;
+}
+#route .time4{
+    left: -448px;
+    text-align: right;
+    top:93px;
 }
 /*白皮书*/
 #book{
@@ -247,6 +284,23 @@ span{
     left:50%;
     transform:translate(-50%,0%);
     -webkit-transform:translate(-50%,0);
+}
+#book .book-title{
+    position: absolute;
+    right: 22px;
+    top:18px;
+    text-align:right;
+}
+#book .book-title>p,#book .book-title>span{
+    font-size: 16px;
+    color: #333333;
+    line-height: 26px;
+}
+#book .book-title>div{
+    margin-top: 2px;
+    font-size: 12px;
+    color: #666666;
+    line-height: 16px;
 }
 #book .contain{
     height:150px;
@@ -271,20 +325,20 @@ span{
 }
 /*核心团队*/
 #team{
-    margin-bottom: 110px;
+    margin-bottom: 40px;
 }
 #team .arv-title{
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 
 }
 #team p{
-    margin-top: 70px;
+    margin-top: 10px;
     padding-left: 10px;
     border-left:2px solid #33A695;
     font-size: 20px;
     color: #333333;
     line-height: 28px;
-    margin-bottom: 40px;
+    margin-bottom: 26px;
 }
 #team li{
     float: left;
@@ -293,15 +347,19 @@ span{
     -webkit-box-shadow: 0 0 3px 1px rgba(122,168,171,0.26);
     padding: 0 14px;
     width: 210px;
-    margin-bottom:40px;
+    margin-bottom:32px;
+    height: 400px;
 }
 #team li:nth-child(4n){
     margin-right:0;
 }
 #team .head{
-    padding-top: 26px;
-    padding-bottom: 30px;
+    padding: 20px 0;
     text-align: center;
+}
+#team .head img{
+    width: 120px;
+    height: 120px;
 }
 #team .name{
     font-size: 18px;
@@ -314,7 +372,7 @@ span{
     line-height: 25px;
     font-size: 18px;
     color: #333333;
-    margin-bottom: 26px;
+    margin-bottom: 16px;
 }
 #team .ability{
     margin-bottom: 26px;
@@ -324,32 +382,35 @@ span{
     text-align: center;
 }
 #team .contain{
-    padding-bottom: 38px;
     font-size: 14px;
     color: #333333;
     line-height: 20px;
-    height: 150px;
+    /*height: 150px;*/
+    /*text-align:justify;*/
+    /*text-justify:inter-ideograph*/
+    /*word-break:break-all;*/
 }
-#team .adviser .contain{
-    height: 220px;
-}
+/*#team .adviser .contain{*/
+    /*height: 220px;*/
+/*}*/
 /*合作伙伴*/
 #partner{
-    height: 338px;
+    height: 270px;
     background-color: #F8F8F8;
     overflow: hidden;
 }
 #partner .arv-title{
-    padding-top: 60px;
+    padding-top: 32px;
 }
 #partner .contain{
-    padding-top: 70px;
+    padding-top: 60px;
 }
-#partner .contain img{
+#partner .contain a{
     margin-right: 20px;
+    display: inline-block;
     float: left;
 }
-#partner .contain img:last-child{
+#partner .contain a:last-child{
     margin-right: 0;
 }
 /*新闻*/
@@ -401,7 +462,50 @@ span{
 }
 /*底部*/
 #bottom{
-    height: 160px;
+    height: 135px;
     background-color: #333;
-    margin-top: 100px;
+}
+#bottom .con{
+    height: 85px;
+    width:1000px;
+    margin: 0 auto;
+}
+#bottom p{
+    text-align: center;
+    font-size: 12px;
+    color: #999999;
+    border-top:1px solid #666 ;
+    height: 49px;
+}
+#bottom p span{
+    display: inline-block;
+    margin-top: 20px;
+}
+#bottom .con>img{
+    width: 116px;
+    padding-top: 25px;
+}
+#bottom .com{
+    float: right;
+    margin-top: 25px;
+    padding-left:30px;
+}
+#bottom .com img{
+    margin-left: 20px;
+    float: left;
+}
+#bottom .menu{
+    float: right;
+    height: 85px;
+    padding-right: 20px;
+    border-right: 1px solid #666;
+}
+#bottom .menu a{
+    margin: 34px 20px 0;
+    font-size: 14px;
+    color: #FFFFFF;
+    display: inline-block;
+}
+#bottom .menu a:hover{
+    color:#33A695;
 }

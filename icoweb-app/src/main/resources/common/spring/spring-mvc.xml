@@ -123,6 +123,20 @@
 		<property name="exposeSessionAttributes" value="true" />
 	</bean>
 
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+
+			<mvc:exclude-mapping path="/**/*.css"/>
+			<mvc:exclude-mapping path="/**/*.js"/>
+			<mvc:exclude-mapping path="/**/*.png"/>
+			<mvc:exclude-mapping path="/**/*.gif"/>
+			<mvc:exclude-mapping path="/**/*.jpg"/>
+			<mvc:exclude-mapping path="/**/*.jpeg"/>
+
+			<bean id = "currInterceptor" class="com.moochain.ico.interceptor.CurrInterceptor"/>
+		</mvc:interceptor>
+	</mvc:interceptors>
 
 	<import resource="spring-redis.xml"/>
 

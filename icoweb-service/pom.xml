@@ -33,6 +33,24 @@
             <version>${project.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.moochain</groupId>
+            <artifactId>art-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>${dubbo.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <!-- others -->
         <dependency>
             <groupId>javax.servlet</groupId>

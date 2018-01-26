@@ -35,6 +35,9 @@
 	<mvc:resources mapping="/js/**"  location="/static/js/"/>
 	<mvc:resources mapping="/lib/**"  location="/static/lib/"/>
 
+	<!-- 解决web.xml文件404,500访问不到问题 -->
+	<mvc:default-servlet-handler/>
+
 	<!-- 默认的注解映射的支持 -->
 	<mvc:annotation-driven  validator="validator" conversion-service="conversion-service" >
 		<mvc:message-converters register-defaults="true">

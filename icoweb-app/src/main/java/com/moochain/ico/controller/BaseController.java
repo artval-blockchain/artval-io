@@ -75,4 +75,20 @@ public class BaseController {
         return ResultDTO.SUCCESS();
     }
 
+    /**
+     * 404错误
+     */
+    @RequestMapping("/disappear")
+    public String pageDisappear(){
+        return "/error/404";
+    }
+
+    /**
+     * 500错误
+     */
+    @RequestMapping("/mistake")
+    public String pageMistake(){
+        return "/error/500";
+    }
+
 }

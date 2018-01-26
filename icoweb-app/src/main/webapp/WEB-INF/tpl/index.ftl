@@ -177,7 +177,7 @@
                     <p>Artval</p>
                     <span><@spring.message code="message.index.look"/></span>
                 </div>
-                <div class="time"><span>2017/12</span></div>
+                <div class="time"><span>2018/02</span></div>
             </div>
             <div class="contain arv-containter">
                 <div class="contain-left">

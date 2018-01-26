@@ -85,6 +85,8 @@ span{
     z-index: 10;
     box-shadow: 1px 0 6px 2px #eee;
     -webkit-box-shadow: 1px 0 6px 2px #eee;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 #nav .logo{
     line-height: 50px;
@@ -437,29 +439,24 @@ span{
 }
 #book .book-title{
     position: absolute;
-    left: 50%;
-    top:50%;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
+    bottom: 68px;
+    right: 14px;
     text-align:center;
-    width: 146px;
-    height: 90px;
-    background-color: rgba(255,255,255,0.8);
 }
 #book .book-title>p,#book .book-title>span{
-    font-size: 18px;
-    color: #000;
-    line-height: 26px;
+    font-size: 16px;
+    color: #333;
+    line-height: 24px;
     font-weight: bold;
+    text-align: right;
 }
 #book .book-title>p{
-    margin-top: 16px;
-    letter-spacing: 2px;
+
 }
 #book .time{
     position: absolute;
-    left: 22px;
-    top: 22px;
+    left: 12px;
+    top: 12px;
     width: 38px;
     height: 38px;
     border: 1px solid #fff;
@@ -503,7 +500,6 @@ span{
 }
 #team .arv-title{
     margin-bottom: 60px;
-
 }
 #team p{
     margin-top: 10px;
@@ -523,21 +519,33 @@ span{
     width: 210px;
     margin-bottom:32px;
     height: 400px;
+    color: #333333;
+    border-radius: 4px;
+}
+#team li:hover {
+    box-shadow:0 0 18px 8px rgba(122,168,171,0.1);
+    -webkit-box-shadow:0 0 18px 8px rgba(122,168,171,0.1);
 }
 #team li:nth-child(4n){
     margin-right:0;
 }
 #team .head{
-    padding: 20px 0;
     text-align: center;
+    width: 120px;
+    height: 120px;
+    margin: 16px auto;
+    overflow: hidden;
+    border-radius: 120px;
+    border: 3px solid #fff;
 }
 #team .head img{
     width: 120px;
     height: 120px;
+    border-radius: 120px;
+    transition:all 0.5s 0s linear;
 }
 #team .name{
     font-size: 18px;
-    color: #333333;
     line-height: 25px;
     margin-bottom: 4px;
     text-align: center;
@@ -551,13 +559,11 @@ span{
 #team .ability{
     margin-bottom: 26px;
     font-size: 18px;
-    color: #333333;
     line-height: 25px;
     text-align: center;
 }
 #team .contain{
     font-size: 14px;
-    color: #333333;
     line-height: 20px;
     /*height: 150px;*/
     /*text-align:justify;*/

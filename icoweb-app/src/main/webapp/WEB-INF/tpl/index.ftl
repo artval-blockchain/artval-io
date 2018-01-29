@@ -339,15 +339,6 @@
                 </li>
                 <li style="height:<@spring.message code="message.index.team.height.med"/>">
                     <div class="head">
-                        <img src="/images/head/d6.png">
-                    </div>
-                    <div class="name">
-                    <@spring.message code="message.index.team.ad6"/>
-                    </div>
-                    <div class="contain"><@spring.message code="message.index.team.ad6.con"/></div>
-                </li>
-                <li style="height:<@spring.message code="message.index.team.height.med"/>">
-                    <div class="head">
                         <img src="/images/head/d7.png">
                     </div>
                     <div class="name">
@@ -357,10 +348,19 @@
                 </li>
                 <li style="height:<@spring.message code="message.index.team.height.med"/>">
                     <div class="head">
+                        <img src="/images/head/d6.png">
+                    </div>
+                    <div class="name">
+                        <@spring.message code="message.index.team.ad6"/>
+                    </div>
+                    <div class="contain"><@spring.message code="message.index.team.ad6.con"/></div>
+                </li>
+                <li style="height:<@spring.message code="message.index.team.height.med"/>">
+                    <div class="head">
                         <img src="/images/head/d8.png">
                     </div>
                     <div class="name">
-                        Yann<@spring.message code="message.index.team.ad8"/>
+                        <@spring.message code="message.index.team.ad8"/>
                     </div>
                     <div class="contain"><@spring.message code="message.index.team.ad8.con"/></div>
                 </li>

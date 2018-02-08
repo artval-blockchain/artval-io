@@ -70,15 +70,10 @@
             <div class="ban_iframe">
                 <div class="con_iframe">
                     <div class="con">
-                        <p><@spring.message code="message.banner.title"/></p>
-                        <span><@spring.message code="message.banner.con"/></span>
-                        <div>
-                            <span><@spring.message code="message.banner.con1"/></span>
-                            <em></em>
-                            <span><@spring.message code="message.banner.con2"/></span>
-                        </div>
+                        <p style="font-size:<@spring.message code="message.banner.title.size"/>"><@spring.message code="message.banner.title"/></p>
+                        <span style="font-size:<@spring.message code="message.banner.con.size"/>"><@spring.message code="message.banner.con"/></span>
+                        <a target="_Blank" href="/images/Artval_whitepaper_<@spring.message code='message.index.look.lang'/>.pdf" ><@spring.message code="message.banner.book"/></a>
                     </div>
-                    <a target="_Blank" href="/images/Artval_whitepaper_<@spring.message code='message.index.look.lang'/>.pdf" ><@spring.message code="message.banner.book"/></a>
                 </div>
             </div>
             <img src="/images/banner.jpg">
@@ -119,7 +114,7 @@
                 <#if arts??>
                     <#list arts as art>
                         <#if art_index<2>
-                            <a target="_Blank" href="http://reg.artval.io/detail/${art.num}?language=${language}"><img aos="flip-left" aos-easing="ease-out-cubic" aos-duration="1500" src="${art.cover}"></a>
+                            <a target="_Blank" href="http://reg.artval.io/art/info/${art.num}/${language}"><img aos="flip-left" aos-easing="ease-out-cubic" aos-duration="1500" src="${art.cover}"></a>
                         </#if>
                     </#list>
                 </#if>
@@ -128,7 +123,7 @@
                 <#if arts??>
                     <#list arts as art>
                         <#if (art_index > 1 && art_index < 8)>
-                            <a target="_Blank" href="http://reg.artval.io/detail/${art.num}?language=${language}"><img  aos="flip-left" aos-easing="ease-out-cubic" aos-duration="1500" src="${art.cover}" alt=""></a>
+                            <a target="_Blank" href="http://reg.artval.io/art/info/${art.num}/${language}"><img  aos="flip-left" aos-easing="ease-out-cubic" aos-duration="1500" src="${art.cover}" alt=""></a>
                         </#if>
                     </#list>
                 </#if>
@@ -153,22 +148,198 @@
                 <span><@spring.message code="message.index.route"/></span>
             </div>
             <div class="contain">
-                <div aos="fade-left" class="time time1">
-                    <span>2017/09</span>
-                    <p><@spring.message code="message.index.route.con1"/></p>
+                <div class="left_con">
+                    <div class="left_move">
+                        <div class="left big">
+                            <div>
+                                <span>01 /</span>
+                                <em>2017</em>
+                            </div>
+                        </div>
+                        <div class="left small">
+                            <div>
+                                <span>03 /</span>
+                                <em>2017</em>
+                            </div>
+                        </div>
+                        <div class="left small">
+                            <div>
+                                <span>06 /</span>
+                                <em>2017</em>
+                            </div>
+                        </div>
+                        <div class="left small">
+                            <div>
+                                <span>09 /</span>
+                                <em>2017</em>
+                            </div>
+                        </div>
+                        <div class="left small">
+                            <div>
+                                <span>10 /</span>
+                                <em>2017</em>
+                            </div>
+                        </div>
+                        <div class="left small">
+                            <div>
+                                <span>11 /</span>
+                                <em>2017</em>
+                            </div>
+                        </div>
+                        <div class="left small">
+                            <div>
+                                <span>12 /</span>
+                                <em>2017</em>
+                            </div>
+                        </div>
+                        <div class="left small">
+                            <div>
+                                <span>01 /</span>
+                                <em>2018</em>
+                            </div>
+                        </div>
+                        <div class="left small">
+                            <div>
+                                <span>03 /</span>
+                                <em>2018</em>
+                            </div>
+                        </div>
+                        <div class="left small">
+                            <div>
+                                <span>06 /</span>
+                                <em>2018</em>
+                            </div>
+                        </div>
+                        <div class="left small">
+                            <div>
+                                <span>09 /</span>
+                                <em>2018</em>
+                            </div>
+                        </div>
+                        <div class="left small">
+                            <div>
+                                <span>12 /</span>
+                                <em>2018</em>
+                            </div>
+                        </div>
+                        <div class="left small">
+                            <div>
+                                <span>05 /</span>
+                                <em>2019</em>
+                            </div>
+                        </div>
+                        <div class="left small">
+                            <div>
+                                <span>07 /</span>
+                                <em>2019</em>
+                            </div>
+                        </div>
+                        <div class="left small">
+                            <div>
+                                <span>12 /</span>
+                                <em>2019</em>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div aos="fade-right" class="time time2">
-                    <span>2018/06</span>
-                    <p><@spring.message code="message.index.route.con2"/></p>
+                <div class="right_con">
+                    <div class="right ">
+                        <div class="con">
+                            <span>2017/01</span>
+                            <p><@spring.message code="message.index.route.con1"/></p>
+                        </div>
+                    </div>
+                    <div class="right shrink">
+                        <div class="con">
+                            <span>2017/03</span>
+                            <p><@spring.message code="message.index.route.con2"/></p>
+                        </div>
+                    </div>
+                    <div class="right shrink">
+                        <div class="con">
+                            <span>2017/06 <@spring.message code="message.index.route.con31"/></span>
+                            <p><@spring.message code="message.index.route.con32"/></p>
+                        </div>
+                    </div>
+                    <div class="right shrink">
+                        <div class="con">
+                            <span>2017/09</span>
+                            <p><@spring.message code="message.index.route.con4"/></p>
+                        </div>
+                    </div>
+                    <div class="right shrink">
+                        <div class="con">
+                            <span>2017/10</span>
+                            <p><@spring.message code="message.index.route.con5"/></p>
+                        </div>
+                    </div>
+                    <div class="right shrink">
+                        <div class="con">
+                            <span>2017/11</span>
+                            <p><@spring.message code="message.index.route.con6"/></p>
+                        </div>
+                    </div>
+                    <div class="right shrink">
+                        <div class="con">
+                            <span>2017/12</span>
+                            <p class="spot"><@spring.message code="message.index.route.con71"/></p>
+                            <p class="spot"><@spring.message code="message.index.route.con72"/></p>
+                        </div>
+                    </div>
+                    <div class="right shrink">
+                        <div class="con">
+                            <span>2018/01</span>
+                            <p><@spring.message code="message.index.route.con8"/></p>
+                        </div>
+                    </div>
+                    <div class="right shrink">
+                        <div class="con">
+                            <span>2018/03-04</span>
+                            <p><@spring.message code="message.index.route.con9"/></p>
+                        </div>
+                    </div>
+                    <div class="right shrink">
+                        <div class="con">
+                            <span>2018/06</span>
+                            <p><@spring.message code="message.index.route.con10"/></p>
+                        </div>
+                    </div>
+                    <div class="right shrink">
+                        <div class="con">
+                            <span>2018/09</span>
+                            <p><@spring.message code="message.index.route.con11"/></p>
+                        </div>
+                    </div>
+                    <div class="right shrink">
+                        <div class="con">
+                            <span>2018/12</span>
+                            <p><@spring.message code="message.index.route.con12"/></p>
+                        </div>
+                    </div>
+                    <div class="right shrink">
+                        <div class="con">
+                            <span>2019/05</span>
+                            <p><@spring.message code="message.index.route.con13"/></p>
+                        </div>
+                    </div>
+                    <div class="right shrink">
+                        <div class="con">
+                            <span>2019/07</span>
+                            <p><@spring.message code="message.index.route.con14"/></p>
+                        </div>
+                    </div>
+                    <div class="right shrink">
+                        <div class="con">
+                            <span>2019/12</span>
+                            <p><@spring.message code="message.index.route.con15"/></p>
+                        </div>
+                    </div>
                 </div>
-                <div aos="fade-left" class="time time3">
-                    <span>2018/12</span>
-                    <p><@spring.message code="message.index.route.con3"/></p>
-                </div>
-                <div aos="fade-right" class="time time4">
-                    <span>2019/12</span>
-                    <p><@spring.message code="message.index.route.con4"/></p>
-                </div>
+               <div class="btn">
+                   <a class="bottom"></a>
+                   <span><em>1</em>/15</span>
+                   <a class="top"></a>
+               </div>
             </div>
         </div>
         <div id="book"  aos="fade-up" aos-anchor-placement="top-bottom" name="#book">
@@ -520,5 +691,6 @@
             once:true
         });
     </script>
+     <script src="/js/home/index.js"></script>
 </body>
 </html>

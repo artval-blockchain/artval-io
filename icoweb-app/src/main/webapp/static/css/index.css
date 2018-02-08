@@ -150,18 +150,18 @@ span{
 #language dl span{
     color: #333;
     padding-left: 12px;
-    font-size: 16px;
+    font-size: 14px;
 
 }
 #language dl{
-    width: 142px;
+    width: 134px;
     position: absolute;
     padding: 4px 0 16px;
     box-shadow: 0 2px 3px 0 rgba(60,60,60,0.07);
     -webkit-box-shadow: 0 2px 3px 0 rgba(60,60,60,0.07);
     border: none;
     background-color: #fff;
-    top: 35px;
+    top: 42px;
     left: 6px;
     display: none;
 }
@@ -169,7 +169,7 @@ span{
     margin-top: 10px;
     cursor: pointer;
     padding-left: 14px;
-    line-height: 36px;
+    line-height: 20px;
 }
 #language dd img{
     width: 24px;
@@ -196,15 +196,17 @@ span{
     width: 100%;
 }
 #banner a{
-    font-size: 15px;
-    color: #333;
-    position: absolute;
-    bottom: 20px;
-    right: 24px;
-    text-decoration: underline;
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    width: 120px;
+    height: 32px;
+    border-radius:16px;
+    line-height: 32px;
+    background-color: rgba(122,168,171,0.9);
 }
 #banner a:hover{
-    color: #46778e;
+    color: #fff;
 }
 #banner .ban_iframe{
     position: absolute;
@@ -234,7 +236,6 @@ span{
 }
 #banner .con p{
     color: #333;
-    font-size: 40px;
     padding-bottom: 20px;
     margin-bottom:24px;
     position: relative;
@@ -250,32 +251,9 @@ span{
     content: '';
 }
 #banner .con>span{
-    font-size: 20px;
     color: #333;
     display: block;
     margin-bottom: 30px;
-}
-#banner .con>div{
-    border: 1px solid #46778e;
-    padding: 0 24px;
-    line-height: 32px;
-    display: inline-block;
-    height: 32px;
-}
-#banner .con>div em{
-    width: 7px;
-    height: 7px;
-    border-radius:8px;
-    -webkit-border-radius:8px;
-    background-color: #46778e;
-    display: inline-block;
-    margin: 0 14px;
-    vertical-align: middle;
-}
-#banner .con>div span{
-    font-size: 20px;
-    color: #46778e;
-    vertical-align: middle;
 }
     /*項目介紹*/
 #project .contain{
@@ -378,47 +356,247 @@ span{
 }
     /*路线图*/
 #route .contain{
-    width: 16px;
-    margin: 70px auto 102px;
-    height:404px;
-    background: url("/images/axis.png") 0 0 no-repeat;
+    height: 504px;
+    width: 952px;
+    padding: 0 24px;
+    overflow: hidden;
+    margin: 60px auto 80px;
     position: relative;
 }
-#route .time{
-    position: relative;
-    width: 400px;
+#route ul{
+    position: absolute;
+    top:0;
+    left:0;
 }
-#route .time span{
+#route .left:after{
+    content:'';
+    position:absolute;
+    width: 2px;
+    height: 45px;
+    left: 50%;
+    top:0;
+    transform:translate(-50%,0);
+    -webkit-transform:translate(-50%,0);
+    background-color:#33A695;
+    z-index: 1;
+}
+#route .left:before{
+    content:'';
+    position:absolute;
+    width: 2px;
+    height: 45px;
+    left: 50%;
+    bottom:0;
+    transform:translate(-50%,0);
+    -webkit-transform:translate(-50%,0);
+    background-color:#33A695;
+    z-index: 1;
+}
+#route .left_move:before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 45px;
+    left:50%;
+    top: 0;
+    transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+    background-color: #fff;
+    z-index: 2;
+}
+#route .left_move:after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 45px;
+    left:50%;
+    bottom: 0;
+    transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+    background-color: #fff;
+    z-index: 2;
+}
+#route .left_con{
+    width: 110px;
+    float: left;
+    position: relative;
+    height: 504px;
+}
+#route .left_move{
+    position: absolute;
+    top:141px;
+    left: 0;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+}
+#route .right_con{
+    float: left;
+    width: 646px;
+    margin-left: 195px;
+    position: relative;
+    height: 504px;
+}
+#route .left{
+    padding: 45px 0;
+    position: relative;
+}
+#route .big>div{
+    display: block;
+    width: 110px;
+    height: 110px;
+    background: url("/images/route_cir.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 2;
+    transition: 0.3s linear;
+    -webkit-transition: 0.3s linear;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#route .big span{
     font-size: 20px;
-    color: #33A695;
+    color: #333333;
+    display: block;
+    margin-top: 26px;
     line-height: 28px;
+    text-align: center;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
 }
-#route .time p{
+#route .big em{
+    font-size: 22px;
+    color: #333333;
+    font-style: normal;
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+}
+#route .spot{
+    padding-left: 20px;
+    background:url("/images/route_spot.png") 0 5px no-repeat;
+    background-size: 10px 10px ;
+}
+#route .small>div{
+    display: block;
+    width: 82px;
+    height: 82px;
+    background: url("/images/route_cir.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 2;
+    transition: 0.3s linear;
+    -webkit-transition: 0.3s linear;
+    overflow: hidden;
+    margin: 0 auto;
+    opacity: 0.5;
+}
+#route .small span{
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
     font-size: 16px;
     color: #333333;
+    display: block;
+    margin-top: 17px;
     line-height: 22px;
+    text-align: center;
+    /*animation: smallSize 0.3s 0s forwards;*/
 }
-#route .time1{
-    left: 60px;
-    top:20px;
+#route .small em{
+    font-size: 18px;
+    color: #333333;
+    font-style: normal;
+    line-height: 25px;
+    text-align: center;
+    display: block;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
 }
-#route .time2{
-    left: -543px;
-    text-align: right;
-    top: 44px;
-    width: 494px;
+/*@keyframes  size{*/
+    /*0%{*/
+
+    /*}*/
+/*}*/
+    /*#route .small{*/
+    /*width: 100px;*/
+/*}*/
+#route .right{
+    width: 544px;
+    position: absolute;
+    left: 0;
+    top:1000px;
+    padding: 28px 62px 38px 40px;
+    box-shadow: 0 8px 26px 4px rgba(27,105,94,0.10);
+    -webkit-box-shadow: 0 8px 26px 4px rgba(27,105,94,0.10);
 }
-#route .time3{
-    left: 60px;
-    top:70px;
-    width: 525px;
+#route .right span{
+    font-size: 20px;
+    color: #333333;
+    line-height: 28px;
 }
-#route .time4{
-    left: -448px;
-    text-align: right;
-    top:93px;
+#route .right p{
+    font-size: 14px;
+    color: #333333;
+    line-height: 21px;
+    margin-top: 10px;
 }
-/*白皮书*/
+#route .shrink{
+    opacity:0.4;
+}
+#route .shrink span{
+     font-size:16px;
+}
+#route .shrink p{
+    font-size:11px;
+}
+#route .right:first-child{
+    top: 168px;
+}
+#route .right:nth-child(2){
+    top:420px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+#route .btn{
+    width: 44px;
+    position: absolute;
+    left: 187px;
+    top:203px;
+}
+#route .btn a{
+    cursor: pointer;
+}
+#route .btn a:first-child{
+    display: inline-block;
+    width:44px;
+    height: 19px;
+    background: url("/images/route_top.png") center 0 no-repeat;
+}
+#route .btn a:last-child{
+    display: inline-block;
+    width:44px;
+    height: 14px;
+    background: url("/images/route_bottom.png") center 0 no-repeat;
+}
+#route .btn span{
+    display: inline-block;
+    height: 40px;
+    font-size: 18px;
+    color: #151515;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    width: 60px;
+    left: -8px;
+}
+#route .btn em{
+    font-style: normal;
+    font-size: 28px;
+    color: #333333;
+}
+/*动画*/
+    /*白皮书*/
 #book{
     width: 100%;
     height: 600px;
@@ -544,7 +722,7 @@ span{
     width: 120px;
     height: 120px;
     border-radius: 120px;
-    transition:all 0.5s 0s linear;
+    transition:all 0.3s linear;
 }
 #team .name{
     font-size: 18px;
